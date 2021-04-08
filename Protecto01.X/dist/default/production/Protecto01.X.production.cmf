@@ -1,0 +1,740 @@
+%CMF
+# %PSECTS Section
+# For each object file, details of its psects are enumerated here.
+# The begining of the section is indicated by %PSECTS.  The first
+# line indicates the name of the first object file, e.g.
+#    $foo.obj
+# Each line that follows describes a psect in that object file, until
+# the next object file.  The lines that describe a psect have the
+# format:
+#    <psect name> <class name> <space> <link address> <load addresses> <length> <delta>
+# All addresses and the length are given in unqualified hexadecimal
+# in delta units.  Any other numeric values are decimal.
+%PSECTS
+$build/default/production/Completo.o
+resVect CODE 0 0 0 3 2
+code CODE 0 0 0 32C 2
+intVect CODE 0 0 0 14 2
+udata_bank0 BANK0 1 20 20 2A 1
+udata_shr COMMON 1 70 70 3 1
+config CONFIG 4 2007 2007 2 2
+# %UNUSED Section
+# This section enumerates the unused ranges of each CLASS. Each entry
+# is described on a single line as follows:
+#    <class name> <range> <delta>
+# Addresses given in the range are in hexadecimal and units of delta.
+%UNUSED
+RAM 4A-6F 1
+RAM A0-EF 1
+RAM 110-16F 1
+RAM 190-1EF 1
+BANK0 4A-6F 1
+BANK1 A0-EF 1
+BANK2 110-16F 1
+BANK3 190-1EF 1
+CONST 32C-1FFF 2
+ENTRY 32C-1FFF 2
+IDLOC 2000-2003 2
+CODE 32C-1FFF 2
+COMMON 73-7F 1
+EEDATA 2100-21FF 2
+STRCODE 32C-1FFF 2
+STRING 32C-1FFF 2
+# %LINETAB Section
+# This section enumerates the file/line to address mappings.
+# The beginning of the section is indicated by %LINETAB.
+# The first line indicates the name of the first object file, e.g.
+#   $foo.obj
+# Each line that follows describes a single mapping until the next
+# object file.  Mappings have the following format:
+#    <address> <psect name> <class name> ><line number>:<file name>
+# The address is absolute and given given in unqualified hex 
+# in delta units of the psect. All mappings within an object file
+# are in ascending order of addresses.
+# All other numeric values are in decimal.
+%LINETAB
+$build/default/production/Completo.o
+0 intVect CODE >103:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+4 intVect CODE >104:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+4 intVect CODE >105:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+5 intVect CODE >106:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+6 intVect CODE >107:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+7 intVect CODE >109:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+7 intVect CODE >110:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+8 intVect CODE >111:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+9 intVect CODE >113:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+A intVect CODE >114:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+B intVect CODE >116:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+C intVect CODE >117:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+D intVect CODE >119:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+E intVect CODE >120:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+F intVect CODE >122:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+F intVect CODE >123:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+10 intVect CODE >124:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+11 intVect CODE >125:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+12 intVect CODE >126:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+13 intVect CODE >127:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+0 resVect CODE >96:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+0 resVect CODE >97:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+0 resVect CODE >98:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+2 resVect CODE >99:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+0 code CODE >131:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+100 code CODE >133:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+100 code CODE >134:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+101 code CODE >135:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+102 code CODE >136:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+103 code CODE >137:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+104 code CODE >139:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+105 code CODE >140:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+106 code CODE >141:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+107 code CODE >142:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+108 code CODE >143:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+109 code CODE >144:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+10A code CODE >145:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+10B code CODE >146:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+10C code CODE >147:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+10D code CODE >148:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+10E code CODE >149:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+10F code CODE >150:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+110 code CODE >151:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+111 code CODE >152:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+112 code CODE >153:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+113 code CODE >154:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+114 code CODE >156:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+114 code CODE >157:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+115 code CODE >158:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+116 code CODE >159:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+117 code CODE >160:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+118 code CODE >161:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+119 code CODE >162:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+11A code CODE >163:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+11B code CODE >166:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+11C code CODE >167:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+11D code CODE >169:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+11E code CODE >170:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+11F code CODE >171:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+120 code CODE >172:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+121 code CODE >177:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+121 code CODE >179:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+122 code CODE >180:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+123 code CODE >181:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+124 code CODE >182:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+125 code CODE >183:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+126 code CODE >184:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+127 code CODE >186:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+128 code CODE >188:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+129 code CODE >189:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+12A code CODE >190:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+12B code CODE >191:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+12C code CODE >192:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+12D code CODE >193:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+12E code CODE >195:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+12F code CODE >196:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+130 code CODE >199:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+131 code CODE >200:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+132 code CODE >201:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+133 code CODE >202:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+134 code CODE >203:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+135 code CODE >204:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+136 code CODE >205:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+137 code CODE >206:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+138 code CODE >208:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+139 code CODE >209:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+13A code CODE >210:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+13B code CODE >211:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+13C code CODE >212:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+13D code CODE >213:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+13E code CODE >214:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+13F code CODE >215:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+140 code CODE >217:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+141 code CODE >218:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+142 code CODE >219:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+143 code CODE >220:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+144 code CODE >221:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+145 code CODE >222:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+146 code CODE >223:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+147 code CODE >224:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+148 code CODE >226:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+149 code CODE >230:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+149 code CODE >231:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+14B code CODE >232:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+14C code CODE >233:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+14D code CODE >234:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+14E code CODE >235:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+14F code CODE >236:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+150 code CODE >237:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+151 code CODE >238:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+152 code CODE >239:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+153 code CODE >241:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+153 code CODE >242:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+155 code CODE >243:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+156 code CODE >244:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+157 code CODE >246:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+158 code CODE >247:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+159 code CODE >248:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+15A code CODE >249:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+15B code CODE >250:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+15C code CODE >251:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+15D code CODE >252:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+15E code CODE >253:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+15F code CODE >254:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+160 code CODE >255:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+161 code CODE >256:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+162 code CODE >257:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+163 code CODE >258:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+164 code CODE >259:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+165 code CODE >260:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+166 code CODE >261:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+167 code CODE >263:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+167 code CODE >264:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+168 code CODE >265:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+169 code CODE >266:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+16A code CODE >267:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+16B code CODE >268:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+16C code CODE >269:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+16D code CODE >271:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+16D code CODE >272:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+16E code CODE >273:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+16F code CODE >274:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+170 code CODE >275:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+171 code CODE >276:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+172 code CODE >277:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+173 code CODE >279:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+173 code CODE >280:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+174 code CODE >281:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+175 code CODE >282:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+176 code CODE >283:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+177 code CODE >284:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+178 code CODE >285:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+179 code CODE >287:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+179 code CODE >288:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+17A code CODE >289:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+17B code CODE >290:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+17C code CODE >291:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+17D code CODE >292:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+17E code CODE >293:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+17F code CODE >295:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+17F code CODE >296:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+180 code CODE >297:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+181 code CODE >298:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+182 code CODE >299:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+183 code CODE >300:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+184 code CODE >301:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+185 code CODE >303:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+185 code CODE >304:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+186 code CODE >305:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+187 code CODE >306:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+188 code CODE >307:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+189 code CODE >308:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+18A code CODE >309:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+18B code CODE >311:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+18B code CODE >312:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+18C code CODE >313:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+18D code CODE >314:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+18E code CODE >315:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+18F code CODE >316:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+190 code CODE >317:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+191 code CODE >319:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+191 code CODE >320:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+192 code CODE >321:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+193 code CODE >322:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+194 code CODE >323:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+195 code CODE >324:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+196 code CODE >325:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+197 code CODE >327:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+197 code CODE >328:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+199 code CODE >329:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+19A code CODE >331:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+19B code CODE >333:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+19C code CODE >334:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+19D code CODE >335:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+19E code CODE >336:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+19F code CODE >337:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+1A0 code CODE >339:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+1A1 code CODE >340:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+1A2 code CODE >341:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+1A3 code CODE >343:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+1A4 code CODE >344:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+1A5 code CODE >345:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+1A6 code CODE >346:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+1A7 code CODE >347:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+1A8 code CODE >349:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+1A9 code CODE >350:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+1AA code CODE >351:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+1AB code CODE >353:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+1AC code CODE >354:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+1AD code CODE >355:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+1AE code CODE >356:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+1AF code CODE >357:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+1B0 code CODE >359:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+1B1 code CODE >360:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+1B2 code CODE >362:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+1B3 code CODE >364:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+1B3 code CODE >365:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+1B4 code CODE >367:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+1B5 code CODE >368:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+1B6 code CODE >369:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+1B7 code CODE >370:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+1B8 code CODE >371:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+1B9 code CODE >372:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+1BA code CODE >373:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+1BB code CODE >374:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+1BC code CODE >376:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+1BD code CODE >377:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+1BE code CODE >378:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+1BF code CODE >379:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+1C0 code CODE >380:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+1C1 code CODE >381:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+1C2 code CODE >382:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+1C3 code CODE >383:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+1C4 code CODE >385:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+1C5 code CODE >386:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+1C6 code CODE >387:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+1C7 code CODE >388:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+1C8 code CODE >389:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+1C9 code CODE >390:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+1CA code CODE >391:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+1CB code CODE >392:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+1CC code CODE >393:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+1CD code CODE >397:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+1CD code CODE >399:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+1CE code CODE >400:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+1CF code CODE >401:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+1D0 code CODE >403:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+1D1 code CODE >404:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+1D2 code CODE >405:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+1D3 code CODE >407:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+1D4 code CODE >408:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+1D5 code CODE >409:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+1D6 code CODE >411:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+1D7 code CODE >413:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+1D7 code CODE >414:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+1D9 code CODE >415:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+1DA code CODE >417:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+1DB code CODE >418:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+1DC code CODE >419:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+1DD code CODE >420:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+1DE code CODE >421:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+1DF code CODE >422:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+1E0 code CODE >423:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+1E1 code CODE >424:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+1E2 code CODE >425:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+1E3 code CODE >427:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+1E3 code CODE >428:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+1E5 code CODE >429:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+1E6 code CODE >430:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+1E7 code CODE >431:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+1E8 code CODE >432:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+1E9 code CODE >433:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+1EA code CODE >434:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+1EB code CODE >435:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+1EC code CODE >436:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+1ED code CODE >437:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+1EE code CODE >439:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+1EF code CODE >441:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+1EF code CODE >442:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+1F1 code CODE >443:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+1F2 code CODE >444:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+1F3 code CODE >445:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+1F4 code CODE >446:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+1F5 code CODE >447:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+1F6 code CODE >448:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+1F7 code CODE >449:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+1F8 code CODE >450:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+1F9 code CODE >451:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+1FA code CODE >453:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+1FB code CODE >455:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+1FB code CODE >456:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+1FC code CODE >457:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+1FD code CODE >458:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+1FE code CODE >460:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+1FF code CODE >461:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+200 code CODE >462:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+201 code CODE >463:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+202 code CODE >464:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+203 code CODE >465:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+204 code CODE >466:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+205 code CODE >467:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+206 code CODE >469:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+207 code CODE >471:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+207 code CODE >472:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+208 code CODE >473:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+209 code CODE >474:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+20A code CODE >475:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+20B code CODE >476:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+20C code CODE >478:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+20D code CODE >479:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+20E code CODE >480:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+20F code CODE >482:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+210 code CODE >484:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+210 code CODE >485:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+211 code CODE >486:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+212 code CODE >487:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+213 code CODE >488:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+214 code CODE >489:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+215 code CODE >490:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+216 code CODE >492:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+216 code CODE >494:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+217 code CODE >495:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+218 code CODE >497:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+219 code CODE >498:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+21A code CODE >499:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+21B code CODE >500:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+21C code CODE >501:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+21D code CODE >502:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+21E code CODE >504:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+21F code CODE >505:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+220 code CODE >506:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+221 code CODE >508:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+222 code CODE >509:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+223 code CODE >510:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+224 code CODE >511:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+225 code CODE >513:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+226 code CODE >515:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+226 code CODE >517:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+227 code CODE >518:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+228 code CODE >520:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+229 code CODE >521:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+22A code CODE >522:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+22B code CODE >523:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+22C code CODE >524:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+22D code CODE >525:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+22E code CODE >527:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+22F code CODE >528:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+230 code CODE >529:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+231 code CODE >531:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+232 code CODE >532:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+233 code CODE >533:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+234 code CODE >534:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+235 code CODE >536:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+236 code CODE >538:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+236 code CODE >540:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+237 code CODE >541:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+238 code CODE >543:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+239 code CODE >544:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+23A code CODE >545:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+23B code CODE >546:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+23C code CODE >547:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+23D code CODE >548:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+23E code CODE >550:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+23F code CODE >551:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+240 code CODE >552:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+241 code CODE >554:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+242 code CODE >555:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+243 code CODE >556:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+244 code CODE >557:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+245 code CODE >559:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+246 code CODE >561:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+246 code CODE >562:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+247 code CODE >563:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+248 code CODE >564:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+249 code CODE >566:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+24A code CODE >567:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+24B code CODE >568:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+24C code CODE >570:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+24D code CODE >571:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+24E code CODE >572:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+24F code CODE >573:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+250 code CODE >575:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+251 code CODE >576:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+252 code CODE >577:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+253 code CODE >578:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+254 code CODE >579:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+255 code CODE >580:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+256 code CODE >581:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+257 code CODE >582:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+258 code CODE >583:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+259 code CODE >585:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+25A code CODE >587:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+25A code CODE >588:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+25B code CODE >590:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+25C code CODE >591:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+25D code CODE >592:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+25E code CODE >593:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+25F code CODE >594:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+260 code CODE >595:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+261 code CODE >597:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+262 code CODE >598:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+263 code CODE >600:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+263 code CODE >601:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+264 code CODE >603:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+265 code CODE >604:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+266 code CODE >605:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+267 code CODE >606:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+268 code CODE >607:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+269 code CODE >608:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+26A code CODE >610:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+26B code CODE >611:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+26C code CODE >613:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+26C code CODE >615:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+26D code CODE >616:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+26E code CODE >617:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+26F code CODE >619:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+270 code CODE >620:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+271 code CODE >621:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+272 code CODE >622:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+273 code CODE >623:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+274 code CODE >624:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+275 code CODE >625:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+276 code CODE >627:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+277 code CODE >628:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+278 code CODE >629:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+279 code CODE >630:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+27A code CODE >631:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+27B code CODE >632:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+27C code CODE >634:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+27C code CODE >635:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+27D code CODE >636:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+27E code CODE >637:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+27F code CODE >638:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+280 code CODE >639:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+281 code CODE >641:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+281 code CODE >642:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+283 code CODE >643:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+284 code CODE >644:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+285 code CODE >645:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+286 code CODE >646:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+287 code CODE >647:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+288 code CODE >649:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+289 code CODE >650:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+28A code CODE >651:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+28B code CODE >652:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+28C code CODE >653:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+28D code CODE >655:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+28E code CODE >656:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+28F code CODE >657:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+290 code CODE >658:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+291 code CODE >659:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+292 code CODE >661:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+293 code CODE >662:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+294 code CODE >663:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+295 code CODE >664:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+296 code CODE >665:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+297 code CODE >667:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+298 code CODE >668:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+299 code CODE >669:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+29A code CODE >670:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+29B code CODE >671:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+29C code CODE >673:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+29D code CODE >675:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+29D code CODE >676:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+29E code CODE >677:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+29F code CODE >678:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+2A0 code CODE >679:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+2A1 code CODE >680:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+2A2 code CODE >681:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+2A3 code CODE >682:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+2A4 code CODE >683:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+2A5 code CODE >685:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+2A6 code CODE >686:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+2A7 code CODE >687:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+2A8 code CODE >688:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+2A9 code CODE >689:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+2AA code CODE >690:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+2AB code CODE >691:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+2AC code CODE >692:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+2AD code CODE >694:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+2AE code CODE >695:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+2AF code CODE >696:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+2B0 code CODE >697:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+2B1 code CODE >698:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+2B2 code CODE >699:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+2B3 code CODE >700:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+2B4 code CODE >701:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+2B5 code CODE >703:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+2B6 code CODE >704:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+2B7 code CODE >705:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+2B8 code CODE >706:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+2B9 code CODE >707:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+2BA code CODE >708:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+2BB code CODE >709:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+2BC code CODE >710:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+2BD code CODE >712:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+2BE code CODE >713:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+2BF code CODE >714:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+2C0 code CODE >715:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+2C1 code CODE >716:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+2C2 code CODE >717:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+2C3 code CODE >718:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+2C4 code CODE >719:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+2C5 code CODE >721:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+2C6 code CODE >722:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+2C7 code CODE >723:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+2C8 code CODE >724:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+2C9 code CODE >725:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+2CA code CODE >726:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+2CB code CODE >727:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+2CC code CODE >728:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+2CD code CODE >729:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+2CE code CODE >731:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+2CE code CODE >732:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+2D0 code CODE >733:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+2D1 code CODE >734:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+2D2 code CODE >735:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+2D3 code CODE >736:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+2D4 code CODE >737:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+2D5 code CODE >739:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+2D5 code CODE >740:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+2D7 code CODE >741:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+2D8 code CODE >742:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+2D9 code CODE >744:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+2DB code CODE >745:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+2DC code CODE >746:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+2DD code CODE >747:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+2DE code CODE >748:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+2DF code CODE >750:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+2E0 code CODE >751:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+2E1 code CODE >752:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+2E2 code CODE >754:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+2E3 code CODE >755:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+2E4 code CODE >756:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+2E5 code CODE >757:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+2E6 code CODE >759:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+2E8 code CODE >760:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+2E9 code CODE >761:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+2EA code CODE >762:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+2EB code CODE >763:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+2EC code CODE >764:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+2ED code CODE >766:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+2ED code CODE >767:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+2EF code CODE >768:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+2F0 code CODE >769:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+2F1 code CODE >770:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+2F2 code CODE >771:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+2F4 code CODE >772:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+2F5 code CODE >773:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+2F6 code CODE >774:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+2F7 code CODE >776:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+2F7 code CODE >777:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+2F9 code CODE >778:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+2FA code CODE >779:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+2FB code CODE >780:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+2FC code CODE >781:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+2FD code CODE >782:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+2FE code CODE >783:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+300 code CODE >784:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+301 code CODE >785:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+302 code CODE >787:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+302 code CODE >788:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+304 code CODE >789:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+305 code CODE >790:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+306 code CODE >791:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+307 code CODE >792:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+308 code CODE >793:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+309 code CODE >794:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+30A code CODE >796:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+30A code CODE >797:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+30C code CODE >798:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+30D code CODE >799:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+30E code CODE >801:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+30F code CODE >802:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+310 code CODE >803:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+311 code CODE >804:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+312 code CODE >806:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+314 code CODE >807:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+315 code CODE >808:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+316 code CODE >809:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+317 code CODE >811:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+318 code CODE >813:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+318 code CODE >814:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+319 code CODE >815:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+31A code CODE >816:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+31B code CODE >817:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+31C code CODE >819:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+31C code CODE >820:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+31E code CODE >821:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+31F code CODE >822:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+320 code CODE >823:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+321 code CODE >824:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+322 code CODE >825:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+323 code CODE >826:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+324 code CODE >828:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+324 code CODE >829:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+325 code CODE >830:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+326 code CODE >831:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+327 code CODE >832:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+328 code CODE >833:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+329 code CODE >834:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+32A code CODE >835:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+32B code CODE >836:C:\Users\Medardo\MPLABXProjects\Protecto01.X\Completo.s
+# %SYMTAB Section
+# An enumeration of all symbols in the program.
+# The beginning of the section is indicated by %SYMTAB.
+# Each line describes a single symbol as follows:
+#    <label> <value> [-]<load-adj> <class> <space> <psect> <file-name>
+# The value and load-adj are both in unqualified hexadecimal.
+# All other numeric values are in decimal.  The load-adj is the
+# quantity one needs to add to the symbol value in order to obtain the load
+# address of the symbol.  This value may be signed. If the symbol
+# was defined in a psect then <psect> will be "-". File-name
+# is the name of the object file in which the symbol was defined.
+%SYMTAB
+__Hspace_0 32C 0 ABS 0 - -
+__Hspace_1 73 0 ABS 0 - -
+__Hspace_3 0 0 ABS 0 - -
+__Hspace_4 4010 0 ABS 0 - -
+__Hudata_bank0 0 0 ABS 0 udata_bank0 -
+__Hudata_bank1 0 0 ABS 0 udata_bank1 -
+__Hudata_bank2 0 0 ABS 0 udata_bank2 -
+__Hudata_bank3 0 0 ABS 0 udata_bank3 -
+__LresVect 0 0 ABS 0 resVect -
+__Hedata 0 0 ABS 0 edata -
+__Hudata 0 0 ABS 0 udata -
+__Hconfig 4012 0 CONFIG 4 config -
+__Ledata 0 0 ABS 0 edata -
+__Ludata 0 0 ABS 0 udata -
+__Hcode 0 0 ABS 0 code -
+__Hdata 0 0 ABS 0 data -
+__Lcode 0 0 ABS 0 code -
+__Ldata 0 0 ABS 0 data -
+__S0 0 0 ABS 0 - -
+__S1 73 0 ABS 0 - -
+__S3 0 0 ABS 0 - -
+__HresVect 0 0 ABS 0 resVect -
+__Lconfig 0 0 CONFIG 4 config -
+__LintVect 0 0 ABS 0 intVect -
+__Lspace_0 0 0 ABS 0 - -
+__Lspace_1 0 0 ABS 0 - -
+__Lspace_3 0 0 ABS 0 - -
+__Lspace_4 0 0 ABS 0 - -
+__Ludata_bank0 0 0 ABS 0 udata_bank0 -
+__Ludata_bank1 0 0 ABS 0 udata_bank1 -
+__Ludata_bank2 0 0 ABS 0 udata_bank2 -
+__Ludata_bank3 0 0 ABS 0 udata_bank3 -
+__Hudata_shr 0 0 ABS 0 udata_shr -
+__Ludata_shr 0 0 ABS 0 udata_shr -
+__HintVect 0 0 ABS 0 intVect -
+# %SPLITSTAB Section
+# This section enumerates all the psect splits performed by the assembler.
+# The beginning of the section is indicated by %SPLITSTAB.
+# Each line is a record a particular split, where the parent psect is on
+# the left and the child on the right.  Note that a child psect is always
+# split form the top of the parent psect. All splits from a given parent
+# are listed in the order in which they occurred.
+%SPLITSTAB
+# %DABS Section
+# This section contains a table of all usuage of the assember
+# directive DABS in the program. Each line has the following format:
+#   <name> <space> <address> <size>
+# If the DABS was originally labelled then that shall be <name>,
+# otherwise name will be "-".  The <space> number is in decimal.
+# <address> and <size> are in byte units as unqaulified hexadecimal
+%DABS
+# %SEGMENTS Section
+# This sections enumerates the segments of the program.  Each segment
+# is described on a single line as follows:
+#    <name> <space> <link address> <file address> <size> <delta>
+# Addresses and size are in unqualified hexadecimal.  The link address
+# and size are in units of delta. The file address is in units of bytes.
+# All other numeric quantities are in decimal.
+%SEGMENTS
+udata_bank0 1 20 20 2A 1
+udata_shr 1 70 70 3 1
+# %NOTES Section
+# This section contains data of all the note-psects.  The beginning of the section
+# is indicated by %NOTES. The first line indicates the name and decimal
+# byte-length of the first note-psect, e.g.
+#   $codecov_info_hdr 16
+# Each line that follows contains the byte-data of the psect in hexadecimal as a
+# space-separated list. These lines are limited to 16 bytes of data.
+%NOTES
