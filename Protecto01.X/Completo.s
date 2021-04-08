@@ -32,17 +32,17 @@ CONFIG BOR4V=BOR40V         ;Reinicio abajo de 4V
     
 ;variables
     
-PSECT udata_bank0           ;variable para:
+PSECT udata_bank0           ;variable para las banderas
     banderas:	    DS 1      
     banderas2:      DS 1 
         
-    aceptarvar:  DS 1
+    aceptarvar:  DS 1	    ;variables para usos multiples
     titilar:	 DS 1
     ressem:	 DS 1
-    delay_big:   DS 1
+    delay_big:   DS 1	    ;para los delays
     delay_small: DS 1
     
-    botonestados:    DS 1
+    botonestados:    DS 1   ;para los botones
     estado:    DS 1
     semaforo:    DS 1
     
@@ -50,11 +50,10 @@ PSECT udata_bank0           ;variable para:
     decenas: DS 1     
     registro: DS 1
         
-    ;numconfig:   DS 1
-    dispconfig1: DS 1
+    dispconfig1: DS 1	    ;para el display de configuraciones
     dispconfig2: DS 1
     
-    numsem1:    DS 1
+    numsem1:    DS 1	    ;las variables para el primer semaforo
     dispsem1_1: DS 1
     dispsem1_2: DS 1
     config1_1:  DS 1
@@ -62,9 +61,9 @@ PSECT udata_bank0           ;variable para:
     verde1:     DS 1
     verde1pas:  DS 1
     rojo1:	DS 1
-    guardado1: DS 1
+    guardado1:  DS 1
     
-    numsem2:	DS 1
+    numsem2:	DS 1	    ;las variables para el segundo semaforo
     dispsem2_1: DS 1
     dispsem2_2: DS 1
     config2_1:  DS 1
@@ -72,9 +71,9 @@ PSECT udata_bank0           ;variable para:
     verde2:	DS 1
     verde2pas:  DS 1
     rojo2:	DS 1
-    guardado2: DS 1
+    guardado2:  DS 1
 
-    numsem3:	DS 1
+    numsem3:	DS 1	    ;las variables para el tercer semaforo
     dispsem3_1: DS 1
     dispsem3_2: DS 1
     config3_1:	DS 1
@@ -164,14 +163,11 @@ main:
     
     
     bsf     banderas, 0  ;inicializar primer display
-    bsf	    banderas2,0	 ;inicializar secuencia de reset semaforo   
     
     movlw   10
     movwf   numsem1
     movwf   numsem2
-    movwf   numsem3
-    ;movwf   semaforo
-    
+    movwf   numsem3    
 
 ;loop principal
 loop:
@@ -183,31 +179,30 @@ loop:
     goto $+2
     bsf ressem,0	;inicializar secuencia de reset semaforo
     
-    call modos
+    call modos		;chequear el modo en que nos encontramos
     
-    btfsc   botonestados, 0
+    btfsc   botonestados, 0	;reviso cual boton se oprime
     call    selestado
     btfsc   botonestados, 1
     call    subir
     btfsc   botonestados, 2
     call    bajar
     
-    call rojos
-    call amarillos
-    ;call verdes
+    call rojos		;programar los tiempos en rojo
+    call amarillos	;controlas los tiempos amarillos
     
-    movf numsem1,w	  ;para cargar los valores del semaforo1
+    movf numsem1,w	;para cargar los valores del semaforo1
     call division
-    movf  decenas, w  ;cargar decenas
+    movf  decenas, w	;cargar decenas
     call  tabla           
     movwf dispsem1_1         
-    movf  numerador, w    ;cargar unidades
+    movf  numerador, w  ;cargar unidades
     call  tabla           
     movwf dispsem1_2
     
     movf numsem2,w	  ;para cargar los valores del semaforo2
     call division
-    movf  decenas, w  ;cargar decenas
+    movf  decenas, w      ;cargar decenas
     call  tabla           
     movwf dispsem2_1         
     movf  numerador, w    ;cargar unidades
@@ -216,7 +211,7 @@ loop:
     
     movf numsem3,w	  ;para cargar los valores del semaforo3  
     call division
-    movf  decenas, w  ;cargar decenas
+    movf  decenas, w      ;cargar decenas
     call  tabla           
     movwf dispsem3_1         
     movf  numerador, w    ;cargar unidades
@@ -229,7 +224,7 @@ loop:
  
 int_ocb:
     banksel PORTB
-    btfss   PORTB, 0
+    btfss   PORTB, 0	;encender la bandera de cada boton individual
     bsf     botonestados, 0
     btfss   PORTB, 1
     bsf     botonestados, 1
@@ -241,7 +236,7 @@ int_ocb:
 int_tmr0:
     banksel PORTA     
     call  rst_tmr0   ;se resetea el tmr0
-    clrf  PORTD      ;se limpia el puerto D
+    clrf  PORTD      ;se limpia el puerto D donde estan los transistores
     
     btfsc banderas, 0;chequeo de banderas para alternar displays
     goto display0    
@@ -328,7 +323,7 @@ int_tmr1:
     banksel PORTA
     call    rst_tmr1	   ;reseteo del tmr1
     
-    decf numsem1
+    decf numsem1	   ;decrementa el numero mostrado en el display1
 
     bcf STATUS,2
     movlw 255
@@ -336,9 +331,9 @@ int_tmr1:
     btfss STATUS,2
     goto $+3
    
-    movlw 10
+    movf guardado1,w
     movwf numsem1
-    decf numsem2
+    decf numsem2	    ;decrementa el numero mostrado en el display2
 
     bcf STATUS,2
     movlw 255
@@ -346,9 +341,9 @@ int_tmr1:
     btfss STATUS,2
     goto $+3
     
-    movlw 10
+    movf guardado2,w
     movwf numsem2
-    decf numsem3
+    decf numsem3	    ;decremente el numero mostrado en el display3
     
     bcf STATUS,2
     movlw 255
@@ -356,7 +351,7 @@ int_tmr1:
     btfss STATUS,2
     goto $+3
     
-    movlw 10
+    movf guardado3,w
     movwf numsem3
     
     return
@@ -364,7 +359,7 @@ int_tmr1:
 int_tmr2:
     bcf PIR1,1
     
-    btfss aceptarvar,2
+    btfss aceptarvar,2	    ;control del titileo led semaforo1
     goto $+7
     incf titilar
     btfss titilar,0
@@ -373,7 +368,7 @@ int_tmr2:
     bcf PORTA,0
     return
     
-    btfss aceptarvar,3
+    btfss aceptarvar,3	    ;control del titileo led semaforo2
     goto $+7
     incf titilar
     btfss titilar,0
@@ -382,7 +377,7 @@ int_tmr2:
     bcf PORTA,1
     return
     
-    btfss aceptarvar,4
+    btfss aceptarvar,4	    ;control del titileo del semaforo3
     goto $+7
     incf titilar
     btfss titilar,0
@@ -393,38 +388,37 @@ int_tmr2:
     return
     
 ;subrutinas
-
+        
 rojos:
     
     movf guardado2,w
     addwf guardado3,w
-    movwf rojo1
+    movwf rojo1		    ;el rojo uno es la suma de los otros tiempos
     
     movf guardado1,w
     addwf guardado3,w
-    movwf rojo2
+    movwf rojo2		    ;el tojo dos es la suma de los otros tiempos
     
     movf guardado1,w
     addwf guardado2,w
-    movwf rojo3
+    movwf rojo3		    ;el rojo tres es la suma de los otros tiempos
     
     return
     
 selestado:
     banksel PORTA
-    incf    estado
+    incf    estado	    ;incrementar la variable que me cambia de estado
     
     bcf     STATUS, 2
     movlw   5           
     subwf   estado, w
     btfss   STATUS, 2	
-    goto    $+3   
-    movlw   0   	
-    movwf   estado
+    goto    $+2 
+    clrf estado
     bcf     botonestados, 0
     return
 
-subir: 
+subir:			    ;incrementar semaforo 
     banksel PORTA
     incf    semaforo
     bcf     STATUS, 2
@@ -438,7 +432,7 @@ subir:
     
     return
  
-bajar: 
+bajar:			    ;decrementar semaforo
     banksel PORTA
     decf    semaforo
     bcf     STATUS, 2
@@ -470,7 +464,6 @@ division:
 
 modogeneral:
     call division
-    movwf registro
     movf  decenas, w  ;cargar decenas
     call  tabla           
     movwf dispconfig1       
@@ -482,7 +475,7 @@ modogeneral:
     return
     
 modo0:
-    clrf dispconfig1
+    clrf dispconfig1	    ;displays apagados y leds apagados
     clrf dispconfig2
     bcf PORTB,5
     bcf PORTB,6
@@ -491,21 +484,21 @@ modo0:
     
 modo1:
     
-    movf guardado1,w
+    movf guardado1,w	;guardar el valor anterior
     movwf verde1pas
     
-    btfss ressem,0
+    btfss ressem,0	;inicializar semaforo en 15
     goto $+4
     movlw 15
     movwf semaforo
     bcf ressem,0
     bsf ressem,1
     
-    bsf PORTB,5
+    bsf PORTB,5		;encender los leds de la configuracion
     bcf PORTB,6   
     bcf PORTB,7
     
-    movf semaforo,w
+    movf semaforo,w	;cargar el valor a verde y a guardado
     movwf verde1  
     movwf guardado1
     call modogeneral
@@ -559,20 +552,20 @@ modo3:
     return
     
 modo4:
-    bsf PORTB,5
+    bsf PORTB,5		    ;encender los 3 leds
     bsf PORTB,6   
     bsf PORTB,7
     
     movlw 1000000B	
-    movwf dispconfig1
+    movwf dispconfig1	    ;cargar la linea de reset
     movwf dispconfig2
     
-    btfsc botonestados,1
+    btfsc botonestados,1    ;chquear cual boton se presiono
     call aceptar
     btfsc botonestados,2
     call cancelar
     
-    bcf PORTA,0
+    bcf PORTA,0		    ;apagar todos los leds
     bcf PORTA,1
     bcf PORTA,2
     bcf PORTA,3
@@ -585,38 +578,38 @@ modo4:
     return   
 
 aceptar:
-    call resetsem
+    call resetsem	;tiempo de rojos
     
-    movf guardado1,w
+    movf guardado1,w	;cargar las config nuevas a cada semaforo
     movwf numsem1
     movf guardado2,w
     movwf numsem2
     movf guardado3,w
     movwf numsem3
     
-    clrf estado
+    clrf estado		;regresar modo 0
     return
     
 cancelar:
-    call resetsem
+    call resetsem	;tiempo de rojos
     
-    movf verde1pas,w
+    movf verde1pas,w	;cargar las config anteriores
     movwf numsem1
     movf verde2pas,w
     movwf numsem2
     movf verde3pas,w
     movwf numsem3
 
-    clrf estado
+    clrf estado		;regresar modo 0
     return
 
 resetsem:
       
     bsf PORTA,6
-    bsf PORTA,7
+    bsf PORTA,7		;semaforors en rojo
     bsf PORTB,3
     
-    movlw 1000000B 
+    movlw 1000000B	;cargar el reset a los displays
     movwf dispsem1_1
     movwf dispsem1_2
     movwf dispsem2_1
@@ -624,7 +617,7 @@ resetsem:
     movwf dispsem3_1
     movwf dispsem3_2
     
-    movlw   255
+    movlw   255		;secuencia de tiempo de espera
     movwf   delay_big
     call    d_small
     decfsz  delay_big, 1
@@ -632,13 +625,13 @@ resetsem:
     return
     
 d_small:
-    movlw   255
+    movlw   255		
     movwf   delay_small
     decfsz  delay_small, 1
     goto    $-1
     return
     
-modos:
+modos:			;revision de que modo le corresponde llamar 
     banksel PORTA
     bcf     STATUS, 2
     movlw   0
